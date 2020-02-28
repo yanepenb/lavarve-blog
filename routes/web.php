@@ -11,13 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', 'PageController@welcome')->name('pages.welcome');
 
-Route::get('/about', 'PageController@about')->name('about');
+Route::get('/about', 'PageController@about')->name('pages.about');
 
-Route::get('/articles', function () {
-    $articles = App\Article::all();
-    return view('articles', ['articles' => $articles]);
-})->name('articles');
+Route::get('/articles', 'ArticleController@index')->name('articles.index');
