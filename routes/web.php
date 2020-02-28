@@ -20,5 +20,6 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/articles', function () {
-    return view('articles');
+    $articles = App\Article::all();
+    return view('articles', ['articles' => $articles]);
 })->name('articles');
