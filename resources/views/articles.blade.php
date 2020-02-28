@@ -4,11 +4,7 @@
 
 @section('content')
     @foreach ($articles as $article)
-        <p>
-            # {{ $article->id }}
-            Name: {{ $article->name }}
-            <br>
-            Body: {{ $article->body }}
-        <p>
+        <h2>{{ $article->name }}</h2>
+        <div>{{ $article->body }}</div>
     @endforeach
 @endsection
