@@ -11,8 +11,14 @@
 |
 */
 
-Route::get('/', 'PageController@welcome')->name('pages.welcome');
+Route::get('/', 'PageController@welcome')
+    ->name('pages.welcome');
 
-Route::get('/about', 'PageController@about')->name('pages.about');
+Route::get('/about', 'PageController@about')
+    ->name('pages.about');
 
-Route::get('/articles', 'ArticleController@index')->name('articles.index');
+Route::get('/articles', 'ArticleController@index')
+    ->name('articles.index');
+
+Route::get('/articles/{id}', 'ArticleController@show')
+    ->name('articles.show');
