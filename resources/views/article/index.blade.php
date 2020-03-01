@@ -1,3 +1,6 @@
+@if (Session::has('status'))
+	{{ Session::get('status') }}
+@endif
 @extends('layouts.app')
 @section('title', 'статьи')
 @section('content')

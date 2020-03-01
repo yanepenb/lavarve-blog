@@ -13,6 +13,7 @@
         <a href="{{ route('pages.welcome') }}">Home</a>
         <a href="{{ route('pages.about') }}">About</a>
         <a href="{{ route('articles.index') }}">Articles</a>
+        <a href="{{ route('articles.create') }}">Article create</a>
         <div class="container mt-4">
             <div>
                 @yield('content')
